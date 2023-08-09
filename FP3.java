@@ -41,7 +41,7 @@ public class FP3 implements Listener, Runnable, CommandExecutor {
 					world.spawnParticle(Particle.SMALL_FLAME, item.getLocation().add(0, 0.5, 0), 1, 0, 0, 0, 0);
 					world.spawnParticle(Particle.LAVA, item.getLocation().add(0, 0.75, 0), 1, 0, 0.1, 0, 0.1);
 					if (item.getTicksLived() >= 60) {
-						world.createExplosion(item.getLocation(), 2);
+						world.createExplosion(item.getLocation(), 2, true, true);
 						world.spawnParticle(Particle.SMOKE_LARGE, item.getLocation(), 25, 0, 0, 0, 0.1);
 						world.spawnParticle(Particle.CLOUD, item.getLocation(), 25, 0, 0, 0, 0.1);
 						world.spawnParticle(Particle.EXPLOSION_NORMAL, item.getLocation(), 1, 0, 0, 0, 0);

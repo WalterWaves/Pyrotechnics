@@ -42,6 +42,12 @@ public class Main extends JavaPlugin {
 		this.getServer().getPluginManager().registerEvents(new BlackHole(), this);
 		Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new BlackHole(), 0, 1);
 		this.getCommand("blackhole").setExecutor(new BlackHole());
+		this.getServer().getPluginManager().registerEvents(new AirStrike(), this);
+		Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new AirStrike(), 0, 1);
+		this.getCommand("airstrike").setExecutor(new AirStrike());
+		this.getServer().getPluginManager().registerEvents(new SphereFirework(), this);
+		Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new SphereFirework(), 0, 1);
+		this.getCommand("spherefirework").setExecutor(new SphereFirework());
 	}
 	
 	@Override
@@ -52,12 +58,14 @@ public class Main extends JavaPlugin {
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if (label.equalsIgnoreCase("pyrotechnics")) {
 			sender.sendMessage(ChatColor.BOLD + "Available Commands:");
+			sender.sendMessage("/airstrike");
 			sender.sendMessage("/blackhole");
 			sender.sendMessage("/destroyblackholes");
 			sender.sendMessage("/exponentialfirework");
 			sender.sendMessage("/fp3");
 			sender.sendMessage("/hydrogenbomb");
 			sender.sendMessage("/piccolo");
+			sender.sendMessage("/spherefirework");
 			sender.sendMessage("/spiral");
 			sender.sendMessage("/timedbomb");
 			sender.sendMessage("/tntrain");
