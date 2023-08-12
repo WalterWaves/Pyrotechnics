@@ -72,31 +72,26 @@ public class FreezeBomb implements Listener, Runnable, CommandExecutor {
 									int randomIceHeight = getRandomInt(15);
 									for (int h = -20; h <= randomIceHeight + 1; h++) {
 										world.getBlockAt(tntprimed.getLocation().add(x, h, z)).setType(Material.ICE);
-										;
 									}
 									int randomIceHeight1 = getRandomInt(8);
 									for (int h = -20; h <= randomIceHeight1 + 1; h++) {
 										world.getBlockAt(tntprimed.getLocation().add(x + 1, h, z))
 												.setType(Material.ICE);
-										;
 									}
 									int randomIceHeight2 = getRandomInt(8);
 									for (int h = -20; h <= randomIceHeight2 + 1; h++) {
 										world.getBlockAt(tntprimed.getLocation().add(x, h, z + 1))
 												.setType(Material.ICE);
-										;
 									}
 									int randomIceHeight3 = getRandomInt(8);
 									for (int h = -20; h <= randomIceHeight3 + 1; h++) {
 										world.getBlockAt(tntprimed.getLocation().add(x - 1, h, z))
 												.setType(Material.ICE);
-										;
 									}
 									int randomIceHeight4 = getRandomInt(8);
 									for (int h = -20; h <= randomIceHeight4 + 1; h++) {
 										world.getBlockAt(tntprimed.getLocation().add(x, h, z - 1))
 												.setType(Material.ICE);
-										;
 									}
 								}
 
@@ -106,93 +101,78 @@ public class FreezeBomb implements Listener, Runnable, CommandExecutor {
 									for (int h = -20; h <= randomSnowHeight + 1; h++) {
 										world.getBlockAt(tntprimed.getLocation().add(x, h, z))
 												.setType(Material.SNOW_BLOCK);
-										;
 									}
 									int randomSnowHeight1 = getRandomInt(3);
 									for (int h = -20; h <= randomSnowHeight1 + 1; h++) {
 										world.getBlockAt(tntprimed.getLocation().add(x + 1, h, z))
 												.setType(Material.SNOW_BLOCK);
-										;
 									}
 									int randomSnowHeight2 = getRandomInt(3);
 									for (int h = -20; h <= randomSnowHeight2 + 1; h++) {
 										world.getBlockAt(tntprimed.getLocation().add(x, h, z + 1))
 												.setType(Material.SNOW_BLOCK);
-										;
 									}
 									int randomSnowHeight3 = getRandomInt(3);
 									for (int h = -20; h <= randomSnowHeight3 + 1; h++) {
 										world.getBlockAt(tntprimed.getLocation().add(x - 1, h, z))
 												.setType(Material.SNOW_BLOCK);
-										;
 									}
 									int randomSnowHeight4 = getRandomInt(3);
 									for (int h = -20; h <= randomSnowHeight4 + 1; h++) {
 										world.getBlockAt(tntprimed.getLocation().add(x, h, z - 1))
 												.setType(Material.SNOW_BLOCK);
-										;
 									}
 									int randomSnowHeight5 = getRandomInt(3);
 									for (int h = -20; h <= randomSnowHeight5 + 1; h++) {
 										world.getBlockAt(tntprimed.getLocation().add(x + 1, h, z + 1))
 												.setType(Material.SNOW_BLOCK);
-										;
 									}
 									int randomSnowHeight6 = getRandomInt(3);
 									for (int h = -20; h <= randomSnowHeight6 + 1; h++) {
 										world.getBlockAt(tntprimed.getLocation().add(x - 1, h, z + 1))
 												.setType(Material.SNOW_BLOCK);
-										;
 									}
 									int randomSnowHeight7 = getRandomInt(3);
 									for (int h = -20; h <= randomSnowHeight7 + 1; h++) {
 										world.getBlockAt(tntprimed.getLocation().add(x + 1, h, z - 1))
 												.setType(Material.SNOW_BLOCK);
-										;
 									}
 									int randomSnowHeight8 = getRandomInt(3);
 									for (int h = -20; h <= randomSnowHeight8 + 1; h++) {
 										world.getBlockAt(tntprimed.getLocation().add(x - 1, h, z - 1))
 												.setType(Material.SNOW_BLOCK);
-										;
 									}
 									int randomSnowHeight9 = getRandomInt(2);
 									for (int h = -20; h <= randomSnowHeight9 + 1; h++) {
 										world.getBlockAt(tntprimed.getLocation().add(x + 2, h, z))
 												.setType(Material.SNOW_BLOCK);
-										;
 									}
 									int randomSnowHeight10 = getRandomInt(2);
 									for (int h = -20; h <= randomSnowHeight10 + 1; h++) {
 										world.getBlockAt(tntprimed.getLocation().add(x - 2, h, z))
 												.setType(Material.SNOW_BLOCK);
-										;
 									}
 									int randomSnowHeight11 = getRandomInt(2);
 									for (int h = -20; h <= randomSnowHeight11 + 1; h++) {
 										world.getBlockAt(tntprimed.getLocation().add(x, h, z + 2))
 												.setType(Material.SNOW_BLOCK);
-										;
 									}
 									int randomSnowHeight12 = getRandomInt(2);
 									for (int h = -20; h <= randomSnowHeight12 + 1; h++) {
 										world.getBlockAt(tntprimed.getLocation().add(x, h, z - 2))
 												.setType(Material.SNOW_BLOCK);
-										;
 									}
 								}
 
 								int randomPolarBear = getRandomInt(500);
 								if (randomPolarBear == 0) {
-									world.spawnEntity(
-											world.getHighestBlockAt(tntprimed.getLocation().add(x, 0, z)).getLocation().add(0, 1, 0),
-											EntityType.POLAR_BEAR);
+									world.spawnEntity(world.getHighestBlockAt(tntprimed.getLocation().add(x, 0, z))
+											.getLocation().add(0, 1, 0), EntityType.POLAR_BEAR);
 								}
 								int randomWolf = getRandomInt(500);
 								if (randomWolf == 0) {
-									world.spawnEntity(
-											world.getHighestBlockAt(tntprimed.getLocation().add(x, 0, z)).getLocation().add(0, 1, 0),
-											EntityType.WOLF);
+									world.spawnEntity(world.getHighestBlockAt(tntprimed.getLocation().add(x, 0, z))
+											.getLocation().add(0, 1, 0), EntityType.WOLF);
 								}
 							}
 						}
