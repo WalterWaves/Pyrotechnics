@@ -3,7 +3,6 @@ package me.WalterWaves.Pyrotechnics;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.lang.Validate;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
@@ -238,7 +237,6 @@ public class BlackHole implements Listener, Runnable, CommandExecutor {
 
 	public void drawLine(Location point1, Location point2, double space) {
 		World world = point1.getWorld();
-		Validate.isTrue(point2.getWorld().equals(world), "Lines cannot be in different worlds!");
 		double distance = point1.distance(point2);
 		Vector p1 = point1.toVector();
 		Vector p2 = point2.toVector();

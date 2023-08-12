@@ -149,7 +149,7 @@ public class TriFirePiccolo implements Listener, Runnable, CommandExecutor {
 		}
 	}
 
-	public static Integer getRandomInt(Integer max) {
+	public Integer getRandomInt(Integer max) {
 		Random ran = new Random();
 		return ran.nextInt(max);
 	}
